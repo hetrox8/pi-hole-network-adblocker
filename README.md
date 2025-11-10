@@ -46,3 +46,14 @@ A complete implementation of Pi-hole for network-wide ad blocking, tracking prot
 # Run the setup script
 chmod +x scripts/setup-pihole.sh
 ./scripts/setup-pihole.sh
+
+# Install Pi-hole
+curl -sSL https://install.pi-hole.net | bash
+
+# Configure network
+sudo nano /etc/dhcpcd.conf
+
+# Static IP configuration
+interface eth0
+static ip_address=172.29.13.188/20
+static routers=172.29.0.1
