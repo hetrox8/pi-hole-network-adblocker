@@ -46,6 +46,8 @@ A complete implementation of Pi-hole for network-wide ad blocking, tracking prot
 # Run the setup script
 chmod +x scripts/setup-pihole.sh
 ./scripts/setup-pihole.sh
+Manual Installation
+bash
 
 # Install Pi-hole
 curl -sSL https://install.pi-hole.net | bash
@@ -53,7 +55,38 @@ curl -sSL https://install.pi-hole.net | bash
 # Configure network
 sudo nano /etc/dhcpcd.conf
 
+🔧 Configuration
+Network Setup
+bash
+
 # Static IP configuration
 interface eth0
 static ip_address=172.29.13.188/20
 static routers=172.29.0.1
+
+Router Integration
+
+    Access router admin panel (192.168.1.1)
+
+    Set DNS server to 172.29.13.188
+
+    Restart router and devices
+
+📈 Monitoring
+
+Access the admin interface at: http://172.29.13.188/admin
+
+https://images/statistics.png
+🚨 Troubleshooting
+
+Common issues and solutions are documented in docs/troubleshooting.md
+🔄 Maintenance
+Update Blocklists
+bash
+
+./scripts/update-lists.sh
+
+Backup Configuration
+bash
+
+./scripts/backup-config.sh
