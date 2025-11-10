@@ -1,5 +1,7 @@
 # 🛡️ Pi-hole Network-wide Ad Blocker
-
+![Pi-hole](https://img.shields.io/badge/Pi-hole-FF6C02?style=for-the-badge&logo=pi-hole&logoColor=white)
+![DNS](https://img.shields.io/badge/DNS-0A84FF?style=for-the-badge)
+![Homelab](https://img.shields.io/badge/Homelab-FF6C02?style=for-the-badge)
 ![Pi-hole Dashboard](images/dashboard.png)
 
 A complete implementation of Pi-hole for network-wide ad blocking, tracking protection, and DNS management in a homelab environment.
